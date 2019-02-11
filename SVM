@@ -1,0 +1,18 @@
+"""
+----
+SVM
+---
+
+builds on linear regression
+
+------------
+KERNAL TRICKS
+------------
+tools for extra means of partioning data
+
+polynomial kernal
+adds dimensions to data such as degree 2
+dimension 1 = x, y
+dimension 2 = x,y,xy,x^2,y^2
+
+
