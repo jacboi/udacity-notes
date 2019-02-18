@@ -1,0 +1,8 @@
+feature scaling
+x - xmin / xmax - mmin
+
+watch out for outliers in rescale
+sklearn fit_transform does this for you
+
+svm and kmeans clusters definately need rescaling
+- distance based algorithims likely need rescaling

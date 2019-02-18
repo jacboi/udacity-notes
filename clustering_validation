@@ -1,0 +1,12 @@
+sihouette coefficient
+method for evaluating clustering
+utilizes a distance metric to evaluate clusters
+- useful for evaluating number of clusters
+- also useful for evaluating different clustering methods
+- not useful for dbscan
+- best used for dense circluar clusters
+
+use dbvc for circular data, noisy data
+- any wehre does well use dbscan
+
+

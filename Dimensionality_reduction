@@ -1,0 +1,42 @@
+Random projection
+similar to PCA but computationally inexpensive
+pick a random line as opposed to a line which minimizes variance
+
+based upon : 
+johnson lindenstrauss lemma
+    - a dataset of n points in high dimensional euclidean space
+    can be mapped down to a space in much lower dimension in a way
+    that preserves the distance between the points to a large degree
+
+using an epsilon the algo will compute the reduced features - dimensions
+
+ICA - independent component analysis
+
+cocktail party problem
+
+mixing matrix = AS
+X what we have
+W what we want
+S = WX
+
+process:
+1 center - whiten X
+2 choose initial random weight matrix
+3 estimate w, containing vectors
+4 decorrelate want5 repoeat from step 3 until converged
+
+assumes 
+- components are statistally independent
+- assume componets are non gaussian
+
+central limit theorem
+- distribution of sum of indepentent variables tends towards gaussian
+
+use weight matrix to maximize non gaussianity
+
+neg entropy : 
+- comes from infromation theory
+    - where entropy comes from
+    - research later
+
+needs as many observations as we have independent components

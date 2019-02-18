@@ -1,0 +1,32 @@
+Gaussian mixture modeling
+
+the use of Gaussian distributions to cluster data
+seems really rad
+much more complex methodology of clustering
+
+initialization
+covariance type : shape of gaussians
+initialization : centroid of the gaussians
+
+
+steps
+- 1. initialize k gaussian distributions
+- 2. soft cluser data "expectation"
+    - calculate probability density function for each function
+    - get gaussian distributions of membership for each point
+- 3. re estimate the gaussians - maximization
+    - calculate weighted average of the clusters
+    - generates new centroid, mean, for cluser
+
+- 4. evaluate log-liklihood to check for convergence
+    - the higher the log liklihood output the closer to converged
+
+- repeat from step 2 until converged
+
+advantages:
+- soft clusering : where memebership is not pure, multi membership
+- cluster shape flexibility
+
+disadvantages : sensitive to initialization values
+- possible to conver to local optimum
+- slow to converge

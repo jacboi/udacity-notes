@@ -1,0 +1,56 @@
+hierarchial clustering
+an alternative to kmeans that gives more flexibility to odd shapes of datapoint
+advantages :
+- has some interesting results
+- provides additional ability to visualize data
+- especially valuable when data itself is hierarchial
+
+disadvantages : 
+- sensative to noise in the data
+- computationally intensive o(n^2)
+
+single link clustering :
+- distance based clustering per closest datapoint. 
+- even after clustering iteration it still uses items of each cluster as distance metric
+
+has some advantages over kmeans where there is odd shapes of datapoint - 
+
+
+produces a dendrogram - a diagram where we can clearly visualize mergings over each iteration
+
+Agglomerative clustering : a classification of clustering where each point begins as a cluster
+
+complete link clustering : 
+- distance based clustering where two farthest point per cluster is used for distance classification
+- tends to create more compact clusters
+
+average link
+- looks at the average distance of all points in two given clusters
+
+wards method
+- default for sklearn : seems like a meaningful method
+- - do note data needs to be normalized as it seems a bit more reactive to variations
+- 1 generate center point of two clusters
+- 2 find distance for all points to average
+- 3 subtract variance for points in a given clusters distance to the clusters center point
+
+# simple normalizing method
+from sklearn import preprocessing
+normalized_X = preprocessing.normalize(iris.data)
+
+Density based clustering || DBSCAN
+epsilon
+min number points
+advantages : 
+- we dont need to specify the number of clusters
+- flexibility in the shapes and sizes of clusters
+- able to deal with noise- able to deal with outliers
+
+disadvantages : 
+- border points that are reachable from twoc clusters
+- faces difficulty finding clusers of varying densities - dbscanh
+
+references :
+https://ieeexplore.ieee.org/abstract/document/5946052
+https://pages.cpsc.ucalgary.ca/~mahanti/papers/clustering.pdf
+
